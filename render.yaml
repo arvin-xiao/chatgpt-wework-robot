@@ -10,7 +10,7 @@ services:
     plan: free              # optional (defaults to starter instance type)
     branch: main            # optional (defaults to master)
     healthCheckPath: /healthz
-    buildCommand: npm install
+    buildCommand: npm install && npm install nodemon --global
     startCommand: nodemon app.js
     envVars:
       - key: PORT
